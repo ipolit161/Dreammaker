@@ -1,15 +1,454 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dreammaker</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    <div class="test">
-        <h1>Dreammaker</h1>
-    </div>
+    <header class="page-header header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo"></div>
+                <div class="header__items">
+                    <div class="header__item">
+                        <a href="" class="header__item-link">Спецпредложения</a>
+                    </div>
+                    <div class="header__item">
+                        <a href="" class="header__item-link">Калькулятор</a>
+                    </div>
+                    <div class="header__item">
+                        <a href="" class="header__item-link">Часто задаваемые вопросы</a>
+                    </div>
+                    <div class="header__item">
+                        <button class="header__item-button">Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="top">
+        <div class="container">
+            <div class="top__items">
+                <div class="top__item">
+                    <h1 class="top__item-title">Peugeot в лизинг</h1>
+                    <div class="top__item-text">на выгодных условиях</div>
+                    <form class="top__form">
+                        <input type="text" class="top__form-name">
+                        <input type="phone" class="top__form-phone">
+                        <button type="submit" class="top__form-button">Оставить заявку</button>
+                    </form>
+                </div>
+                <div class="top__item">
+                    <img src="#" alt="#">
+                </div>
+                </div>
+                <div class="top__benefit">
+                    <div class="top__benefit-item">
+                        <h3 class="top__benefit-titel">до 17%</h3>
+                        <p class="top__benefit-text">скидки на автомобиль</p>
+                    </div>
+                    <div class="top__benefit-item">
+                        <h3 class="top__benefit-titel">до 40%</h3>
+                        <p class="top__benefit-text">экономия на налогах</p>
+                    </div>
+                    <div class="top__benefit-item">
+                        <h3 class="top__benefit-titel">Специальные</h3>
+                        <p class="top__benefit-text">условия и субсидии</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="special">
+        <div class="container">
+            <div class="page__top">
+                <div class="page__top-text">
+                    <h2 class="page__top-titel">Спецпредложения</h2>
+                    <p class="page__top-subtitle">Автомобили на любой вкус</p>
+                </div>
+                <div class="page__top-button">
+                    <a href="!#" class="page__top-link">Получить предложения</a>
+                </div>
+            </div>
+            <div class="special__items">
+                <a class="special__card">
+                    <h4 class="special__card-title">Peugeot Boxer</h4>
+                    <p class="special__card-instock">В наличии</p>
+                    <img src="" alt="" class="special__card-img">
+                    <h5 class="special__card-price">от 24 319 руб/мес.</h5>
+                    <p class="special__card-priceyear">от 1 789 000 руб.</p>
+                    <button>Получить предложение</button>
+                </a>
+                <a class="special__card">
+                    <h4 class="special__card-title">Peugeot Expert</h4>
+                    <p class="special__card-instock">В наличии</p>
+                    <img src="" alt="" class="special__card-img">
+                    <h5 class="special__card-price">от 20 404 руб/мес.</h5>
+                    <p class="special__card-priceyear">от 1 496 000 руб.</p>
+                    <button>Получить предложение</button>
+                </a>
+                <a class="special__card">
+                    <h4 class="special__card-title">Peugeot Traveller</h4>
+                    <p class="special__card-instock">В наличии</p>
+                    <img src="" alt="" class="special__card-img">
+                    <h5 class="special__card-price">от 27 460 руб/мес.</h5>
+                    <p class="special__card-priceyear">от 2 024 000 руб.</p>
+                    <button>Получить предложение</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="page-calculator">
+        <div class="container">
+            <div class="page__top">
+                <div class="page__top-text">
+                    <h2 class="page__top-titel">Расчет лизинга</h2>
+                    <p class="page__top-subtitle">Калькулятор лизинга онлайн</p>
+                </div>
+                <div class="page__top-button">
+                    <a href="!#" class="page__top-link">Нужна помощь?</a>
+                </div>
+            </div>
+        </div>
+        <div class="page-calculator__advantage">
+            <p class="page-calculator__item">Лидеры рынка</p>
+            <p class="page-calculator__item">Низкие платежи</p>
+            <p class="page-calculator__item">Аванс от 5%</p>
+            <p class="page-calculator__item">Без переплата</p>
+        </div>
+        <div class="calculator">
+            <div class="calculator__top">
+                <div class="calculator__title">Умный калькулятор</div>
+                <div class="calculator__button"></div>
+            </div>
+            <div class="calculator__select">
+                <div class="calculator__select-button">
+                    <input id='1' type="radio" name="radio" checked>
+                    <label for="1">Я юридиское лицо</label>
+                </div>
+                <div class="calculator__select-button">
+                    <input id='2' type="radio" name="radio">
+                    <label for="2">Я физическое лицо</label>
+                </div>
+            </div>
+            <div class="calculator__form">
+                <div class="calculator__form-title">
+                    Форма регистрации
+                </div>
+                <div class="calculator__form-select">
+                    <select>
+                        <option value="#">ООО</option>
+                        <option value="#">ЧП</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calculator__form">
+                <div class="calculator__form-title">
+                    Срок регистрации
+                </div>
+                <div class="calculator__form-select">
+                    <select>
+                        <option value="#">Год</option>
+                        <option value="#">Больше года</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calculator__form">
+                <div class="calculator__form-title">
+                    Система налогообложения
+                </div>
+                <div class="calculator__form-select">
+                    <select>
+                        <option value="#">УСН</option>
+                        <option value="#">УСН2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calculator__form">
+                <div class="calculator__form-title">
+                    Предмет лизинга
+                </div>
+                <div class="calculator__form-select">
+                    <select>
+                        <option value="#">Легковой автомобиль</option>
+                        <option value="#">Легковой автомобиль</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calculator__form">
+                <div class="calculator__form-title">
+                    Город регистрации
+                </div>
+                <div class="calculator__form-select">
+                    <select>
+                        <option value="#">Москва</option>
+                        <option value="#">Москва</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calculator__form">
+                <div class="calculator__form-title">
+                    Сумма предмета лизинга, руб.
+                </div>
+                <input type="text">
+                <p class="calculator__form-subtext">от 1 000 000 руб. до 55 000 000 руб.</p>
+            </div>
+            <div class="calculator__form">
+                <div class="calculator__form-title">
+                    Срок лизинга, мес.
+                </div>
+                <input type="text">
+                <p class="calculator__form-subtext">от 6 мес. до 66 мес.</p>
+            </div>
+        </div>
+        <div class="page-calculator__answer">
+            <p class="page-calculator__answer-subtext">Подходящих компаний</p>
+            <h4 class="page-calculator__answer-text">4 компании</h4>
+        </div>
+        <div class="page-calculator__answer">
+            <p class="page-calculator__answer-subtext">Минимальный платеж</p>
+            <h4 class="page-calculator__answer-text">157 809 руб.</h4>
+        </div>
+        <div class="page-calculator__agreement">
+            <input type="checkbox" id="calculator__agreement">
+            <label for="calculator__agreement">
+                Согласен с <a href="#">условиями пользования сайтом</a> 
+            </label>
+        </div>
+        <button class="page-calculator__button">Получить предложения</button>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <div class="page__top">
+                <div class="page__top-text">
+                    <h2 class="page__top-titel">5 простых шагов</h2>
+                    <p class="page__top-subtitle">Для приобретения автомобиля в лизинг</p>
+                </div>
+                <div class="page__top-button">
+                    <a href="!#" class="page__top-link">Оставить заявку</a>
+                </div>
+            </div>
+            <ul class="steps__items">
+                <li class="steps__item">
+                    <h6 class="steps__item-number">1</h6>
+                    <div class="steps__item-text">Оставить заявку
+                        онлайн</div>
+                </li>
+                <li class="steps__item">
+                    <h6 class="steps__item-number">2</h6>
+                    <div class="steps__item-text">Получить персональные
+                        предложения</div>
+                </li>
+                <li class="steps__item">
+                    <h6 class="steps__item-number">3</h6>
+                    <div class="steps__item-text">Предоставить
+                        документы</div>
+                </li>
+                <li class="steps__item">
+                    <h6 class="steps__item-number">4</h6>
+                    <div class="steps__item-text">Заключить
+                        договор</div>
+                </li>
+                <li class="steps__item">
+                    <h6 class="steps__item-number">5</h6>
+                    <div class="steps__item-text">Получить
+                        автомобиль</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="questions">
+        <div class="container">
+            <div class="page__top">
+                <div class="page__top-text">
+                    <h2 class="page__top-titel">Часто задаваемые
+                        вопросы</h2>
+                </div>
+                <div class="page__top-button">
+                    <a href="!#" class="page__top-link">Оставить заявку</a>
+                </div>
+            </div>
+            <div class="questions__wrapper">
+                <div class="questions__items">
+                    <div class="questions__item">
+                        <h5 class="questions__item-title">Что такое лизинг?</h5>
+                        <p class="questions__item-text">Лизинг - это один из видов финансовых услуг, суть которого заключается в кредитовании приобретения основных средств компании, например автомобилей, спецтехники или оборудования.</p>
+                    </div>
+                    <div class="questions__item">
+                        <h5 class="questions__item-title">Каковы преимущества лизинга?</h5>
+                        <p class="questions__item-text">Лизинг позволяет снизить налогооблагаемую базу компании, поскольку все выплаты по лизинговому договору включаются в себестоимость, в результате чего снижается налог на прибыль.
+                            НДС в составе лизинговых платежей идет к зачету.
+                            В результате ускоренной амортизации предмета лизинга объем налога на имущество уменьшается в три раза.</p>
+                    </div>
+                    <div class="questions__item">
+                        <h5 class="questions__item-title">Какие требования предъявляются
+                            к лизингополучателю?</h5>
+                        <p class="questions__item-text">Лизингополучателем может быть как юридическое лицо, так и физическое лицо. Срок ведения бизнеса юридического лица должен составлять не менее 6 месяцев. Если срок существования компании менее 6 месяцев, то лизинговая компания вправе попросить предоставить поручителя.
+                        </p>
+                    </div>
+                    <div class="questions__item">
+                        <h5 class="questions__item-title">Какой первоначальный взнос необходимо внести?</h5>
+                        <p class="questions__item-text">Аванс может составлять от 5% до 49% в зависимости от Ваших пожеланий, транспортного средства, которое Вы хотите приобрести, а также программы финансирования, которую выбираете.
+                        </p>
+                    </div>
+                    <div class="questions__item">
+                        <h5 class="questions__item-title">На какой срок оформляется лизинг?</h5>
+                        <p class="questions__item-text">Максимальный срок лизинга составляет 5 лет, минимальный - 1 год. Для снижения ежемесячных расходов оптимален лизинг на длительный срок. Для снижения удорожания выбирайте короткие сроки финансовой аренды.
+                        </p>
+                    </div>
+                    <div class="questions__item">
+                        <h5 class="questions__item-title">Что такое выкупной платеж?</h5>
+                        <p class="questions__item-text">Это финальная оплата по договору лизинга, после которой право собственности на имущество переходит от лизинговой компании к лизингополучателю. Размер выкупного платежа Вы можете определить самостоятельно. За счет максимального выкупного платежа сокращаются ежемесячные платежи, за счет минимального - снижаются расходы на последнем этапе.
+                        </p>
+                    </div>
+                    <div class="questions__item">
+                        <h5 class="questions__item-title">Возможен ли досрочный выкуп имущества?</h5>
+                        <p class="questions__item-text">Если договор лизинга предусматривает переход права собственности на предмет лизинга от лизинговой компании к лизингополучателю, последний вправе досрочно выкупить имущество, находящееся в лизинге, по прошествии 6 - 13 месяцев срока лизинга, уплатив Лизингодателю сумму невыплаченных платежей.
+                        </p>
+                    </div>
+                    <div class="questions__item">
+                        <h5 class="questions__item-title">Страхование является обязательным условием
+                            приобретения имущества в лизинг?</h5>
+                        <p class="questions__item-text">Страхование предмета лизинга является одним из ключевых условий лизинговой сделки. Имущество страхуют от полной гибели и повреждений. Такая практика обусловлена тем, что до истечения срока действия договора лизинга имущество находится в собственности лизинговой компании, которая по понятным причинам хочет сохранить имущество в товарном виде – в будущем его, возможно, придется реализовывать на вторичном рынке.
+                            Страховая премия может быть как включена в лизинговые платежи, так и оплачиваться лизингополучателем отдельно. В этом случае лизингополучатель берет на себя обязательство самостоятельно застраховать имущество в согласованной  страховой компании. 
+                            </p>
+                    </div>
+                </div>
+                <div class="questions__form"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="dealer">
+        <div class="container">
+            <div class="page__top">
+                <div class="page__top-text">
+                    <h2 class="page__top-titel">Дилерские центры</h2>
+                    <p class="page__top-subtitle">Только лидеры рынка</p>
+                </div>
+                <div class="page__top-button">
+                    <a href="!#" class="page__top-link">Оставить заявку</a>
+                </div>
+            </div>
+            <div class="dealer__wrapper">
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+                <div class="dealer__item">
+                    <img src="" alt="" class="dealer__item-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="requests">
+        <div class="container">
+            <div class="page__top">
+                <div class="page__top-text">
+                    <h2 class="page__top-titel">Часто ищут</h2>
+                </div>
+                <div class="page__top-button">
+                    <a href="!#" class="page__top-link">Оставить заявку</a>
+                </div>
+            </div>
+            <div class="requests__wrapper">
+                <div class="requests__item">
+                    <h6 class="requests__item-title">peugeot traveller</h6>
+                    <ul class="requests__list">
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                    </ul>
+                </div>
+                <div class="requests__item">
+                    <h6 class="requests__item-title">peugeot expert</h6>
+                    <ul class="requests__list">
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                    </ul>
+                </div>
+                <div class="requests__item">
+                    <h6 class="requests__item-title">peugeot partner</h6>
+                    <ul class="requests__list">
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                    </ul>
+                </div>
+                <div class="requests__item">
+                    <h6 class="requests__item-title">peugeot boxer</h6>
+                    <ul class="requests__list">
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                        <li class="requests__list-item"></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
     <script src="./js/libs.min.js"></script>
 </body>
 </html>
