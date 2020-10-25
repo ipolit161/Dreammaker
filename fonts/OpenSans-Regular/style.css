@@ -1,0 +1,9 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "OpenSans-Regular";
+
+  src: url("./fonts/OpenSans-Regular.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/OpenSans-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
