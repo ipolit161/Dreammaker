@@ -28,3 +28,70 @@ h6{
     margin: 0;
     font-size: inherit;
 }
+
+body{
+    @extend %Montserrat-Reg;
+    color: #1C1B26;
+}
+.button{
+    border: none;
+    background: transparent;
+    height: 42px;
+    width: 170px;
+    border: 1px solid #16449D;
+    border-radius: 15px;
+    color: #16449D;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover{
+        transition: all .3s;
+        color: white;
+        background: #16449D;
+    }
+}
+.container {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.page{
+    &__top{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__top-titel{
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: -0.03em;
+        margin-bottom: 20px;
+    }
+    &__top-subtitle{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100.4%;
+        letter-spacing: -0.03em;
+        opacity: 0.4;
+        margin-top: 0;
+    }
+    &__top-link{
+        width: 255px;
+        height: 70px;
+        background-color: #FAFAFA;
+        border-radius: 15px;
+        cursor: pointer;
+        font-weight: 600;
+        line-height: 24px;
+        font-size: 16px;
+        letter-spacing: -0.03em;
+        color: #16449D;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            border: 1px solid #16449D;
+        }
+    }
+    
+}
