@@ -9,38 +9,42 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
+    <!--
     <header class="page-header header">
         <div class="container">
             <div class="header__wrapper">
-                <div class="header__logo">Peugeotleasing</div>
+                <a href="#" class="header__logo">Peugeotleasing</a>
                 <ul class="header__items">
                     <li class="header__item">
-                        <a href="" class="header__item-link">Спецпредложения</a>
+                        <a href="#special" class="header__item-link">Спецпредложения</a>
                     </li>
                     <li class="header__item">
-                        <a href="" class="header__item-link">Калькулятор</a>
+                        <a href="#calculator" class="header__item-link">Калькулятор</a>
                     </li>
                     <li class="header__item">
-                        <a href="" class="header__item-link">Часто задаваемые вопросы</a>
+                        <a href="#questions" class="header__item-link">Часто задаваемые вопросы</a>
                     </li>
                 </ul>
-                <div class="header__item">
+                <div class="header__btn">
                     <button class="header__item-button button">Оставить заявку</button>
                 </div>
             </div>
         </div>
     </header>
 
-
+-->
     <section class="top">
         <div class="container">
             <div class="top__items">
                 <div class="top__item">
-                    <h1 class="top__item-title">Peugeot в лизинг</h1>
-                    <div class="top__item-text">на выгодных условиях</div>
+                    <div class="top__item-mobile">
+                        <h1 class="top__item-title">Peugeot в лизинг</h1>
+                        <div class="top__item-text">на выгодных условиях</div>
+                </div>
+                <img class="top__item-img-mobile" src="./images/orange-car.jpg" alt="#">
                     <form class="top__form">
                         <input type="text" class="top__form-item" placeholder="Ваше имя">
-                        <input type="phone" class="top__form-item" placeholder="Номер телефона">
+                        <input type="tel" class="top__form-item" placeholder="Номер телефона">
                         <button type="submit" class="top__form-button">Оставить заявку</button>
                     </form>
                 </div>
@@ -66,7 +70,7 @@
         </div>
     </section>
 
-    <section class="special">
+    <section id="special" class="special">
         <div class="container">
             <div class="page__top">
                 <div class="page__top-text">
@@ -113,8 +117,7 @@
         </div>
     </section>
 
-
-    <section class="page-calculator">
+    <section id="calculator" class="page-calculator">
         <div class="container">
             <div class="page__top">
                 <div class="page__top-text">
@@ -138,17 +141,16 @@
                         <button class="calculator__btn">Сбросить</button>
                     </div>
                     <div class="calculator__select">
-                        <label class="calculator__select-button"  for="1">
-                            <input id='1' type="radio" name="radio" checked>
-                            <img src="./images/icon-build.svg" alt="">
-                            <div>Я юридиское лицо</div>
-                        </label>
-                        <label class="calculator__select-button" for="2">
-                            <input id='2' type="radio" name="radio">
-                            <img src="./images/icon-user.svg" alt="">
-                            <div>Я физическое лицо</div>
-                        </label>
+                        <div class="calculator__select-button calculator__select-button--active"  for="1">
+                            <input id="radio-1" type="radio" name='radio' value="1" checked>
+                            <label for="radio-1">Я юридиское лицо</label>
+                        </div>
+                        <div class="calculator__select-button" for="2">
+                            <input id="radio-2" type="radio" name='radio' value="2" >
+                            <label for="radio-2">Я физическое лицо</label>
+                        </div>
                     </div>
+                    <div class="calculator__form-inner">
                     <div class="calculator__form">
                         <div class="calculator__form-title">
                             Форма регистрации
@@ -182,6 +184,8 @@
                             </select>
                         </div>
                     </div>
+                </div>
+                <div class="calculator__inner-botton">
                     <div class="calculator__form">
                         <div class="calculator__form-title">
                             Предмет лизинга
@@ -208,17 +212,40 @@
                         <div class="calculator__form-title">
                             Сумма предмета лизинга, руб.
                         </div>
-                        <input type="text">
+                        <input id="sum-lising" class="calculator__form-input calculator__input-sum" type="number" placeholder="1 700 000">
                         <p class="calculator__form-subtext">от 1 000 000 руб. до 55 000 000 руб.</p>
                     </div>
                     <div class="calculator__form">
                         <div class="calculator__form-title">
                             Срок лизинга, мес.
                         </div>
-                        <input type="text">
+                        <input class="calculator__form-input calculator__input-month" type="text" placeholder="10">
                         <p class="calculator__form-subtext">от 6 мес. до 66 мес.</p>
                     </div>
+                    <div class="calculator__form calculator__range">
+                        <div class="calculator__form-title">
+                            Аванс, руб.
+                        </div>
+                        <input class="calculator__form-input calculator__input-advance" id="value" type="number" placeholder="1 700 000">
+                        <input type="range" 
+                        min="0"
+                        max="833000"
+                        value="60" id="rangeSlider" class="calculator__rangeSlider rangeSlider-advance">
+                    </div>
+                    <div class="calculator__form calculator__range">
+                        <div class="calculator__form-title">
+                            Аванс, проц.
+                        </div>
+                        <input class="calculator__form-input calculator__input-advanceperc" id="procent" type="number" placeholder="13">
+                        <input type="range" 
+                        min="0"
+                        max="13"
+                        value="13" id="rangeSlider" class="calculator__rangeSlider rangeSlider-advanceperc">
+                    </div>
                 </div>
+            </div>
+            <div class="page-calculator__wrapper">
+                <div class="page-calculator__inner">
                 <div class="page-calculator__answer">
                     <p class="page-calculator__answer-subtext">Подходящих компаний</p>
                     <h4 class="page-calculator__answer-text">4 компании</h4>
@@ -227,17 +254,24 @@
                     <p class="page-calculator__answer-subtext">Минимальный платеж</p>
                     <h4 class="page-calculator__answer-text">157 809 руб.</h4>
                 </div>
+            </div>
                 <div class="page-calculator__agreement">
-                    <input type="checkbox" id="calculator__agreement">
+                    <div class="page-calculator__agreement-wrapper">
+                    <input type="checkbox" class="agreement-checkbox" id="calculator__agreement">
                     <label for="calculator__agreement">
                         Согласен с <a href="#">условиями пользования сайтом</a> 
                     </label>
+                    </div>
+                    <button class="page-calculator__button">Получить предложения</button>
                 </div>
-                <button class="page-calculator__button">Получить предложения</button>
+
             </div>
-                </div>
+        </div>
+    </div>
                 
     </section>
+
+
 
     <section class="steps">
         <div class="container">
@@ -281,7 +315,8 @@
     </section>
 
 
-    <section class="questions">
+
+    <section id="questions" class="questions">
         <div class="container">
             <div class="page__top">
                 <div class="page__top-text">
@@ -296,7 +331,7 @@
                 <div class="questions__items">
                     <div class="questions__item questions__item--active">
                         <h5 class="questions__item-title">Что такое лизинг?</h5>
-                        <p class="questions__item-text">Лизинг - это один из видов финансовых услуг, суть которого заключается в кредитовании приобретения основных средств компании, например автомобилей, спецтехники или оборудования.</p>
+                        <p class="questions__item-text questions__text--active">Лизинг - это один из видов финансовых услуг, суть которого заключается в кредитовании приобретения основных средств компании, например автомобилей, спецтехники или оборудования.</p>
                     </div>
                     <div class="questions__item">
                         <h5 class="questions__item-title">Каковы преимущества лизинга?</h5>
@@ -342,13 +377,14 @@
                     <div class="questions__form-inner">
                         <h4 class="questions__form-title">Оставить заявку на лизинг</h4>
                         <input type="text" class="questions__form-input" placeholder="Ваше имя">
-                        <input type="number" class="questions__form-input" placeholder="Номер телефона">
+                        <input type="tel" class="questions__form-input" placeholder="Номер телефона">
                         <button type="submit" class="questions__form-btn">Оставить заявку</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <section class="dealer">
@@ -395,6 +431,7 @@
             </div>
         </div>
     </section>
+
 
 
     <section class="requests">
@@ -463,7 +500,58 @@
         </div>
     </section>
 
+
+
+    <section class="individual-schedule">
+        <div class="container">
+            <div class="individual-schedule__wrapper">
+            <h5 class="individual-schedule__titel">
+                Получить индивидуальный
+график платежей по лизингу
+            </h5>
+            <div class="individual-schedule__form">
+                <input type="text" class="individual-schedule__input" placeholder="Ваше имя">
+                <input type="tel" class="individual-schedule__input" placeholder="Номер телефона">
+                <button type="submit" class="individual-schedule__btn">Оставить заявку</button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+<!--
+
+    <footer class="footer">
+        <div class="container">
+            <div class="header__wrapper footer__wrapper">
+                <div class="header__logo">Peugeotleasing</div>
+                <ul class="header__items">
+                    <li class="header__item">
+                        <a href="#special" class="header__item-link">Спецпредложения</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#calculator" class="header__item-link">Калькулятор</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#special" class="header__item-link">Модельный ряд</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#questions" class="header__item-link">Часто задаваемые вопросы</a>
+                    </li>
+                </ul>
+                <div class="header__item-btn">
+                    <button class="header__item-button button">Оставить заявку</button>
+                </div>
+        </div>
+        <div class="footer__items">
+            <div class="footer__copiright">(c) peugeotleasing.ru</div>
+            <div class="footer__tel">8 800 555 35 35</div>
+        </div>
+    </footer>
+-->
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/libs.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
