@@ -1,14 +1,9 @@
-@media (max-width: 1600px){
-    .top__item-img {
-        height: 439px;
-    }
-}
+// @media (max-width: 1600px){
+// }
 
-@media (max-width: 1300px){
-    .top__item-img {
-        height: 350px;
-    }
-}
+// @media (max-width: 1300px){
+    
+// }
 
 @media (max-width: 1156px){
     .steps__items::before {
@@ -17,12 +12,77 @@
 }
 
 @media (max-width: 1075px){
+    .header__items{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(#F7F7F7, .9);
+        padding-top: 90px;
+        padding-bottom: 90px;
+        transition: transform .5s;
+        transform: translateY(-100%);
+        z-index: -1;
+        &--active{
+            transform: translateY(0%);
+        }
+
+    }
+    .nav__btn{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        display: block;
+        cursor: pointer;
+        z-index: 20;
+    }
+    
+    .nav__btn::before,
+    .nav__btn::after{
+        content: '';
+        width: 18px;
+        height: 2px;
+        background-color: #1C1B26;
+        display: block;
+        margin-bottom: 6px;
+        transition: transform .3s;
+    }
+    .nav__btn::after{
+        margin-bottom: 0;
+        
+    }
+    .nav__btn-line{
+        width: 18px;
+        height: 2px;
+        display: block;
+        background-color: #1C1B26;
+        margin-bottom: 6px;
+    }
+    .nav__btn.nav__btn--active{
+        .nav__btn-line{
+            opacity: 0;
+            transition: opacity .0s;
+        }
+        &::after{
+            width: 24px;
+            transform: translateY(-8px) rotate(-135deg);
+        }
+        &::before{
+            width: 24px;
+            transform: translateY(8px) rotate(135deg);
+        }
+    }
+
+
+
     .top__item-img {
         display: none;
     }
     .top__item-img-mobile{
         display: inline-block;
-        height: 165px;
+        max-width: 318px;
     }
     .top__item-mobile{
         display: inline-block;
@@ -49,7 +109,6 @@
     }
     .page-calculator__item{
         min-width: 155px;
-        height: 114px;
     }
     .page-calculator__advantage{
         display: flex;
@@ -74,6 +133,18 @@
     .individual-schedule__wrapper{
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .header__items{
+        flex-direction: column;
+    }
+    .header__item + .header__item{
+        margin: 0;
+    }
+    .individual-schedule__wrapper{
+        margin-bottom: 39px;
+    }
+    .footer__wrapper .header__item{
+        margin-bottom: 24px;
     }
 }
 
@@ -100,6 +171,15 @@
         width: 100%;
         margin-left: 0;
     }
+    .footer{
+        padding-top: 25px;
+    }
+    .footer__wrapper{
+        margin-bottom: 30px;
+    }
+    .footer__wrapper .header__item{
+        margin-bottom: 24px;
+    }
 }
 @media (max-width: 770px){
     .calculator__select{
@@ -123,9 +203,6 @@
     }
     .calculator__range{
         margin-bottom: 26px;
-    }
-    .page-calculator{
-        height: 1950px;
     }
 }
 @media (max-width: 716px){
@@ -162,7 +239,6 @@
     }
     .special__card{
         width: 253px;
-        height: 387px;
     }
     .special__card-btn{
         width: 290px;
@@ -216,8 +292,11 @@
     }
     .individual-schedule__input + .individual-schedule__input {
         margin-left: 0;
+    }
+    .header__btn{
+        display: none;
+    }
 }
-
 @media (max-width: 591px){
     .calculator__form-select{
         min-width: 145px;
@@ -227,6 +306,41 @@
 @media (max-width: 503px){
     .page-calculator__item{
         max-width: 166px;
+    }
+    .footer{
+        padding-top: 0;
+    }
+    .footer__wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 43px;
+    }
+    .footer__wrapper .header__logo{
+        margin-bottom: 24px;
+    }
+    .footer__wrapper .header__item{
+        margin-bottom: 24px;
+    }
+    .footer__wrapper .header__items{
+        align-items: flex-start;
+    }
+    .footer__wrapper .header__items{
+        order: 1;
+    }
+    .footer__wrapper .header__item-btn{
+        width: 100%;
+        text-align: center;
+    }
+    .footer__wrapper .header__item-button{
+        margin-bottom: 57px;
+        width: 343px;
+        height: 60px;
+    }
+    .footer__tel{
+        display: none;
+    }
+    .footer__items{
+        justify-content: center;
     }
 }
 @media (max-width: 503px){
@@ -250,8 +364,4 @@
     .calculator__inner-botton{
         flex-wrap: nowrap;
     }
-    .page-calculator{
-        height: 2100px;
-    }
-}
 }

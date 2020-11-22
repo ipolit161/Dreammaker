@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    <!--
+
     <header class="page-header header">
         <div class="container">
             <div class="header__wrapper">
                 <a href="#" class="header__logo">Peugeotleasing</a>
+                <nav class="header__nav ">
+                    <button class="nav__btn">
+                        <span class="nav__btn-line"></span>
+                    </button>
                 <ul class="header__items">
                     <li class="header__item">
                         <a href="#special" class="header__item-link">Спецпредложения</a>
@@ -25,14 +29,16 @@
                         <a href="#questions" class="header__item-link">Часто задаваемые вопросы</a>
                     </li>
                 </ul>
-                <div class="header__btn">
+            </nav>
+                <a href="#popup" class="header__btn">
                     <button class="header__item-button button">Оставить заявку</button>
-                </div>
+                </a>
             </div>
         </div>
     </header>
 
--->
+
+
     <section class="top">
         <div class="container">
             <div class="top__items">
@@ -227,10 +233,14 @@
                             Аванс, руб.
                         </div>
                         <input class="calculator__form-input calculator__input-advance" id="value" type="number" placeholder="1 700 000">
+                        <div class="input__advance-wrapper">
+                            <span class="input__advance-min">0 руб.</span>
+                            <span class="input__advance-max">833 000 руб.</span>
+                        </div>
                         <input type="range" 
                         min="0"
-                        max="833000"
-                        value="60" id="rangeSlider" class="calculator__rangeSlider rangeSlider-advance">
+                        max="850000"
+                        value="100000" id="rangeSlider" class="calculator__rangeSlider rangeSlider-advance">
                     </div>
                     <div class="calculator__form calculator__range">
                         <div class="calculator__form-title">
@@ -281,7 +291,7 @@
                     <p class="page__top-subtitle">Для приобретения автомобиля в лизинг</p>
                 </div>
                 <div class="page__top-button">
-                    <a href="!#" class="page__top-link">Оставить заявку</a>
+                    <a href="#popup" class="page__top-link">Оставить заявку</a>
                 </div>
             </div>
             <ul class="steps__items">
@@ -518,7 +528,7 @@
         </div>
     </section>
 
-<!--
+
 
     <footer class="footer">
         <div class="container">
@@ -547,8 +557,37 @@
             <div class="footer__tel">8 800 555 35 35</div>
         </div>
     </footer>
--->
+    <div id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">
+                </a>
+                <div class="popup__title">Оставить заявку на лизинг</div>
+                <div class="popup__form">
+                    <input type="text" class="popup__form-input" placeholder="Ваше имя">
+                    <input type="tel" class="popup__form-input" placeholder="Номер телефона">
+                    <button type="submit" class="popup__form-btn">Оставить заявку</button>
+                </div>
+                <div class="popup__sendForm-completed">
+                    <div class="popup__sendForm-text">Заявка на лизинг успешно отправлена!</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id="popup-sended" class="popup-sended">
+        <div class="popup-sended__body">
+            <div class="popup-sended__content">
+                <a href="#" class="popup-sended__close"></a>
+                <img class="popup-sended__img" src="./images/done.svg" alt="">
+                <div class="popup-sended__title">Заявка на лизинг успешно отправлена!</div>
+                <a href="#" class="popup-sended__form-btn">
+                    <div class="sended__form-btn">Отлично!</div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/libs.min.js"></script>

@@ -17,6 +17,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+        z-index: 5;
     }
     &__items{
         display: flex;
@@ -43,13 +44,17 @@
         margin-left: 35px;
     }
 }
-
+.nav__btn{
+    display: none;
+    
+}
 .top{
     margin-bottom: 210px;
     &__items{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: -1;
     }
     &__item-title{
         font-weight: 600;
@@ -69,7 +74,7 @@
         margin-bottom: 60px;
     }
     &__item-img{
-        max-width: 868px;
+        max-width: 760px;
     }
     &__form{
         display: flex;
@@ -112,9 +117,10 @@
     }
     &__benefit-item{
         width: 350px;
-        height: 126px;
+        margin-bottom: 28px;
         padding-left: 96px;
         position: relative;
+        z-index: -1;
     }
     &__benefit-item:first-child{
         color: #25C147;
@@ -195,10 +201,8 @@
     }
     &__card{
         width: 350px;
-        height: 517px;
         border-radius: 15px;
         padding: 30px;
-        padding-bottom: 200px;
         cursor: pointer;
         border: 2px solid #F8F8F8;
         overflow: hidden;
@@ -276,7 +280,7 @@
         padding: 62px 25px 25px 25px;
         background:rgba(250, 250, 250, 0.6);
         width: 255px;
-        height: 114px;
+        display: inline-block;
         border-radius: 15px;
     }
     .calculator__item-award::before{
@@ -323,7 +327,6 @@
 
 .calculator{
     @extend %OpenSans-Reg;
-    height: 976px;
     margin: 0 auto;
     background: rgba(250, 250, 250, 0.6);
     border-radius: 40px;
@@ -448,7 +451,7 @@
         margin-bottom: 20px;
     }
     &__input-advance{
-        margin-bottom: 20px;
+        
     }
     &__rangeSlider{
         -webkit-appearance: none;
@@ -462,24 +465,32 @@
             opacity: 1;
         }
     }
-    .rangeSlider-advance::after{
-        content: '833 000 руб.';
-        position: absolute;
-        font-size: 12px;
-        line-height: 16px;
-        color: #878686;
-        left: 79%;
-        top: 13px;
-    }
-    .rangeSlider-advance::before{
-        content: '0 руб.';
-        position: absolute;
-        font-size: 12px;
-        line-height: 16px;
-        color: #878686;
-        right: 90%;
-        top: 13px;
-    }
+        .input__advance-wrapper{
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            line-height: 16px;
+            color: #878686;
+            margin-bottom: 20px;
+        }
+    // .rangeSlider-advance::after{
+    //     content: '833 000 руб.';
+    //     position: absolute;
+    //     font-size: 12px;
+    //     line-height: 16px;
+    //     color: #878686;
+    //     left: 79%;
+    //     top: 13px;
+    // }
+    // .rangeSlider-advance::before{
+    //     content: '0 руб.';
+    //     position: absolute;
+    //     font-size: 12px;
+    //     line-height: 16px;
+    //     color: #878686;
+    //     right: 90%;
+    //     top: 13px;
+    // }
     &__rangeSlider::-webkit-slider-thumb{
         -webkit-appearance: none;
         appearance: none;
@@ -808,11 +819,11 @@
 .individual-schedule{
     
     &__wrapper{
-        height: 439px;
         background-color: #16449D;
         padding-top: 112px;
         border-radius: 40px;
         margin-bottom: 198px;
+        padding-bottom: 80px;
     }
     &__titel{
         color: #fff;
@@ -863,6 +874,9 @@
 .footer{
     background-color: #FBFBFB;
     padding-top: 108px;
+    .header__logo{
+        line-height: 240.4%;
+    }
     &__wrapper{
         margin-bottom: 136px;
     }
@@ -874,6 +888,196 @@
     }
 }
 
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    transition: all .8s ease 0s;
+    &__area{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
 
+    }
+    &__body{
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+        background-color: rgba(#F7F7F7, 0.9);
+    }
+    &__content{
+        max-width: 343px;
+        background-color: white;
+        padding: 27px;
+        border-radius: 15px;
+        position: relative;
+    }
+    &__close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/x.svg');
+        background-repeat: no-repeat;
+    }
+    &__title{
+        text-align: center;
+        font-weight: 600;
+        line-height: 126.4%;
+        font-size: 24px;
+        margin-bottom: 45px;
+    }
+    &__form-input{
+        width: 287px;
+        height: 60px;
+        background-color: #F7F7F7;
+        border: none;
+        border-radius: 15px;
+        padding-left: 15px;
+        margin-bottom: 24px;
+        outline: none;
+    }
+    &__form-btn{
+        width: 287px;
+        height: 70px;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        background-color: #16449D;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.03em;
+        cursor: pointer;
+        transition: all .3s;
+        margin-bottom: 36px;
+    }
+    &__form-btn:hover{
+        background-color:#3C76E7;
+    }
+    &__sendForm-text{
+        display: none;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 126.4%;
+        letter-spacing: -0.03em;
+        padding-left: 56px;
+        position: relative;
+        &::before{
+            content: '';
+            background: url('../images/form-send-copleted.svg');
+            background-repeat: no-repeat;
+            width: 42px;
+            height: 42px;
+
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+    }
+    .open{
+        opacity: 1;
+        visibility: visible;
+    }
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.popup-sended{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all .8s ease 0s;
+    &__body{
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+        background-color: rgba(#F7F7F7, 0.9);
+    }
+    &__content{
+        max-width: 343px;
+        background-color: white;
+        padding: 27px;
+        padding-top: 110px;
+        border-radius: 15px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    &__close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/x.svg');
+        background-repeat: no-repeat;
+    }
+    &__img{
+        margin-bottom: 27px;
+        
+    }
+    &__title{
+        text-align: center;
+        font-weight: 600;
+        line-height: 126.4%;
+        font-size: 24px;
+        margin-bottom: 45px;
+    }
+    &__form-btn{
+        width: 287px;
+        height: 70px;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        background-color: #16449D;
+        cursor: pointer;
+        transition: all .3s;
+        margin-bottom: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sended__form-btn{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.03em;
+    }
+    &__form-btn:hover{
+        background-color:#3C76E7;
+    }
+    .open{
+        opacity: 1;
+        visibility: visible;
+    }
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+}
 
 @import 'media';
